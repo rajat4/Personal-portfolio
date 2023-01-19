@@ -24,7 +24,7 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
+                <p>Java Developer</p>
                 <h1>Hi, I'm <span>Rajat</span><br> Thawal from India.</h1>
             </div>
         </div>
@@ -38,22 +38,67 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam libero obcaecati nihil sapiente.
-                        Rerum quam totam consequatur quo? Corrupti nihil laboriosam labore veritatis consequatur odit.
-                        Et fugit eligendi quasi earum deserunt obcaecati aliquid dolorum, dicta, cum dolores hic.
-                        Delectus, aperiam?</p>
+                    <p>I have worked on projects using technologies HTML, CSS, JavaScript, jQuery, Angular Framework,
+                        Ionic Framework, Java, JDBC, mySQL Server, Spring Boot Framework, Maven Build Tool, Bootstrap,
+                        Python.
+                        I have end-to-end web & mobile application development (front-end, back-end, database)
+                        experience.
+                        Apart from Technical Expertise I have excellent soft skills, team building, leadership,
+                        analytical thinking, interpersonal, oral and written communication skills.
+                    </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
 
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br> Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>May 2022 - July 2022</span><br>Consultant at Capgemini</li>
+                            <li><span>Jan 2022 - Apr 2022</span><br>Software Engineer at Cognizant</li>
+                            <li><span>2021</span><br>Developer at Reliance Securities</li>
+                            <li><span>2019</span><br>Trainee at Sabado Technologies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>K. J. Somaiya College Of Engineering</li>
+                            <li><span>2013</span><br>12th from Bal Bharati Public School</li>
+                            <li><span>2011</span><br>10th From Ryan Internation School</li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
 </body>
 
 </html>
